@@ -3,7 +3,7 @@ Currency Converter CLI
 # Run The Currency Converter
 
 ```
-@neha.dev/project-currency-converter
+npx @neha.dev/project-currency-converter
 
 ```
 ## Package used
