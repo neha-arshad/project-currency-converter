@@ -1,6 +1,6 @@
 {
   "name": "@neha.dev/project-currency-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "app.js",
   "type": "module",
   "bin": "app.js",
