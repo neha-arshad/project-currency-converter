@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import chalk from "chalk";
 import inquirer from "inquirer";
 import chalkanimation from "chalk-animation";
@@ -33,7 +34,7 @@ async function converter() {
             message: chalk.blueBright.italic("\nEnter your amount:")
         }
     ]);
-    // function for Converted currency
+    // function for Conversion currency rates
     let conversionRates = `https://v6.exchangerate-api.com/v6/943c89ddff9e557b9f0ed2e4/pair/${currencyConverter.from}/${currencyConverter.to}`;
     let conversionRatesData = async (data) => {
         let conversionRatesData = await fetch(data);
@@ -42,6 +43,6 @@ async function converter() {
     };
     let conversionAmount = await conversionRatesData(conversionRates);
     let convertedAmount = currencyConverter.amount * conversionAmount;
-    console.log(`your ${currencyConverter.from}amount converted to ${currencyConverter.to} = ${chalk.redBright.italic(convertedAmount)}`);
+    console.log(`your ${currencyConverter.from} Money converted to ${currencyConverter.to} = ${chalk.redBright.italic(convertedAmount)}`);
 }
 converter();
